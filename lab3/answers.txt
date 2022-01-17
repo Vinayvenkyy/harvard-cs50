@@ -1,0 +1,27 @@
+sort1 uses: Bubble sort
+
+How do you know?: Because it is the fastest in sorted data since it had no swaps to make.
+
+sort2 uses: Merge sort
+
+How do you know?: Because the time taken is consistent and it is the lowest for reversed and random type.
+
+sort3 uses: Selection Sort
+
+How do you know?: Because it was the taking almost same amount of time even if it was sorted, random or reversed.
+
+
+
+TIME:
+    SORT1 :
+        Sorted5000:  0m0.012s       random5000: 0m0.062s        reversed5000:  0m0.083s
+        Sorted10000: 0m0.081s       random10000:0m0.508s        reversed10000: 0m0.417s
+        Sorted50000: 0m3.253s       random50000:0m16.988s       reversed50000: 0m13.836s
+    SORT2 :
+        Sorted5000:  0m0.013s       random5000: 0m0.011s        reversed5000:  0m0.013s
+        Sorted10000: 0m0.078s       random10000:0m0.020s        reversed10000: 0m0.020s
+        Sorted50000: 0m4.602s       random50000:0m3.303s        reversed50000: 0m4.866s
+    SORT3:
+        Sorted5000:  0m0.077s       random5000: 0m0.092s        reversed5000:  0m0.036s
+        Sorted10000: 0m0.229s       random10000: 0m0.231s       reversed10000: 0m0.306s
+        Sorted50000: 0m9.470s       random50000: 0m8.841s       reversed50000: 0m10.266s
