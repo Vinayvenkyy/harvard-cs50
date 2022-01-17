@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    INDEX
+{% endblock %}
+
+{% block main %}
+    
+    <table class="table table-bordered">
+         <thead>
+             <tr>
+                 <th scope = "col">SYMBOL</th>
+                 <th scope = "col">NAME</th>
+                 <th scope = "col">SHARES</th>
+                 <th scope = "col">PRICE</th>
+                 <th scope = "col">TOTAL</th>
+             </tr>
+         </thead>
+         
+         <tbody>
+             {% for stock in stocks %}
+             <tr>
+                 <td> {{ stock["symbol"] }} </td>
+                 <td> {{ stock["name"] }} </td>
+                 <td> {{ stock["total_shares"] }} </td>
+                 <td> {{ usd(stock["price"]) }} </td>
+                 <td> {{ usd(stock["total_shares"] * stock["price"]) }} </td>
+             </tr>
+             {% endfor %}
+             
+             <tr>
+                 <td>CASH</td>
+                 <td colspan= "3"></td>
+                 <td>{{ cash }}</td>
+             </tr>
+         </tbody>
+         
+         <tfoot>
+             <td colspan="4"></td>
+             <td>{{ total }}</td>
+         </tfoot>
+    </table>
+    
+    
+{% endblock %}
